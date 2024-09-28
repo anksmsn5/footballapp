@@ -1,4 +1,3 @@
-// components/Header.tsx
 import React from 'react';
 import Link from 'next/link';
 import '../globals.css'; 
@@ -10,7 +9,7 @@ const Header: React.FC = () => {
     <header className="bg-white-600 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
         <Link href="/" className="text-white text-2xl font-bold">
-         <Image src={Logo} className='logo'></Image>
+         <Image src={Logo} className='logo' alt="logo"></Image>
         </Link>
         <nav>
           <ul className="flex space-x-4">
