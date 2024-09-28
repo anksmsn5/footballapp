@@ -1,6 +1,7 @@
 // pages/login.tsx
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import Header from './components/header';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -21,6 +22,7 @@ const Login = () => {
   };
 
   return (
+   <> <Header></Header>
     <div style={styles.container}>
       <h1 style={styles.heading}>Login</h1>
       <form onSubmit={handleLogin} style={styles.form}>
@@ -52,6 +54,7 @@ const Login = () => {
         </button>
       </form>
     </div>
+    </>
   );
 };
 
