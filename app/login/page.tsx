@@ -1,15 +1,18 @@
-import Header from "../components/Header"
-import Image from "next/image";
+"use client";
+import React  from 'react';
+
+import '../globals.css'; // Import CSS module
+import Header from '../components/Header';
 import Brand from '../public/images/brand.jpg'
+import Image from 'next/image';
 
-
-const Login = () => {
-  
+const Login: React.FC = () => {
   
 
   return (
     <>
-    <Header/>
+    <Header></Header>
+
     <div className="flex">
       <div className="w-1/2  justify-center bg-white-500 p-4">
       <div className="bg-white rounded-lg p-12 max-w-md w-full automargin">
@@ -49,66 +52,19 @@ const Login = () => {
           </button>
         </form>
         <p className="text-center text-gray-600 text-sm mt-4">
-          Already have an account?{' '}
+          Do not have an account?{' '}
           <a href="/login" className="text-blue-500 hover:underline">
-            Log in
+            Register
           </a>
         </p>
       </div>
       </div>
       <div className="w-1/2 bg-white-500">
-        <Image src={Brand}/>
+        <Image src={Brand} alt="brand"/>
       </div>
     </div>
     </>
   );
-};
-
-// Inline styles for simplicity
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column' as 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-    backgroundColor: '#f4f4f4',
-  },
-  heading: {
-    fontSize: '2rem',
-    marginBottom: '1rem',
-  },
-  form: {
-    width: '300px',
-    padding: '2rem',
-    backgroundColor: '#fff',
-    border: '1px solid #ccc',
-    borderRadius: '8px',
-  },
-  formGroup: {
-    marginBottom: '1rem',
-  },
-  input: {
-    width: '100%',
-    padding: '0.5rem',
-    borderRadius: '4px',
-    border: '1px solid #ccc',
-    marginTop: '0.5rem',
-  },
-  button: {
-    width: '100%',
-    padding: '0.75rem',
-    backgroundColor: '#0070f3',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    marginTop: '1rem',
-  },
-  error: {
-    color: 'red',
-    marginTop: '1rem',
-  },
 };
 
 export default Login;

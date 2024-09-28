@@ -1,31 +1,13 @@
 "use client";
-import React, { useState } from 'react';
-import styles from '../styles/Register.module.css';
+import React from 'react';
+
 import '../globals.css'; // Import CSS module
 import Header from '../components/Header';
 import Brand from '../public/images/brand.jpg'
 import Image from 'next/image';
 
 const Register: React.FC = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission logic (e.g., API call)
-    console.log('Form submitted:', formData);
-  };
+  
 
   return (
     <>
@@ -78,7 +60,7 @@ const Register: React.FC = () => {
       </div>
       </div>
       <div className="w-1/2 bg-white-500">
-        <Image src={Brand}/>
+        <Image src={Brand} alt="brand"/>
       </div>
     </div>
     </>
