@@ -1,4 +1,4 @@
-import Header from "../components/header";
+import Header from "../components/Header";
 import Image from "next/image";
 import Brand from '../public/images/brand.jpg'
 

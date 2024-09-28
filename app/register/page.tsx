@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from '../styles/Register.module.css';
 import '../globals.css'; // Import CSS module
-import Header from '../components/header';
+import Header from '../components/Header';
 import Brand from '../public/images/brand.jpg'
 import Image from 'next/image';
 
